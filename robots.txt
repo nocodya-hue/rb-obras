@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nocodya-hue.github.io/rb-obras/sitemap.xml

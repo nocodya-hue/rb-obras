@@ -85,8 +85,9 @@ section, .pie { background: var(--fondo); color: var(--tinta); }
 .portada__antes img { filter: saturate(.85) brightness(.92); }
 .portada__foto figcaption, .portada__antes figcaption { position: absolute; top: 12px; left: 12px; padding: 8px 12px; border-radius: 999px; background: rgba(15, 16, 18, .78); color: var(--cal); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .portada__foto figcaption { background: var(--cobre); color: #120c06; }
-.portada__pie { position: absolute; left: 0; top: 0; max-width: 38%; font-size: 14px; line-height: 1.45; color: var(--gris-cl); }
-.portada__pie::after { content: ' →'; color: var(--cobre-cl); }
+.portada__pie { font-size: 14px; line-height: 1.45; color: var(--gris-cl); }
+.portada__pie--foto { position: absolute; left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(15, 16, 18, .74); color: var(--cal); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.portada__pie--movil { display: none; }
 .cifras { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--linea); }
 .cifra { padding: 26px 22px 30px 0; }
 .cifra + .cifra { padding-left: 22px; border-left: 1px solid var(--linea); }
@@ -301,8 +302,9 @@ dialog::backdrop { background: rgba(5, 6, 7, .78); backdrop-filter: blur(4px); }
   .portada__fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; height: auto; min-height: 0; align-items: end; }
   .portada__antes { position: relative; right: auto; bottom: auto; height: auto; width: 100%; transform: none; animation: none; }
   .portada__foto { height: auto; width: 100%; }
-  .portada__pie { position: static; grid-column: 1 / -1; grid-row: 1; max-width: none; margin-bottom: 2px; }
-  .portada__pie::after { content: ' ↓'; }
+  .portada__pie--foto { display: none; }
+  .portada__pie--movil { display: block; grid-column: 1 / -1; grid-row: 1; margin-bottom: 2px; }
+  .portada__pie--movil::after { content: ' ↓'; color: var(--cobre-cl); }
   .portada__foto figcaption, .portada__antes figcaption { top: 8px; left: 8px; padding: 6px 9px; font-size: 10px; white-space: nowrap; }
   .portada__rejilla { padding-bottom: 8px; }
   .cifras { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; }
